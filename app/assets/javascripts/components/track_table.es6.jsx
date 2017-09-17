@@ -10,15 +10,16 @@ class TrackTable extends React.Component {
     });
 
     return (
-      <table style={{marginLeft: 'auto', marginRight: 'auto'}}>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Listeners</th>
-          </tr>
-        </thead>
-        <tbody>{rows}</tbody>
-      </table>
+      <Table head={<TrackHead />} rows={rows} />
     );
   }
+}
+
+function TrackHead() {
+  return (
+    <tr>
+      <th>Name</th>
+      <th>Listeners</th>
+    </tr>
+  );
 }

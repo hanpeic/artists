@@ -10,15 +10,16 @@ class ArtistTable extends React.Component {
     });
 
     return (
-      <table style={{marginLeft: 'auto', marginRight: 'auto'}}>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Img</th>
-          </tr>
-        </thead>
-        <tbody>{rows}</tbody>
-      </table>
+      <Table head={<ArtistHead />} rows={rows} />
     );
   }
+}
+
+function ArtistHead() {
+  return (
+    <tr>
+      <th>Name</th>
+      <th>Img</th>
+    </tr>
+  );
 }
