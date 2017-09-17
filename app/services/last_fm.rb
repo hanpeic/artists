@@ -8,20 +8,20 @@ class LastFm
     end
   end
 
-  def top_artists(country, page = 1)
+  def top_artists(country, page)
     params = {
       method: 'geo.gettopartists',
       country: country,
-      page: page
+      page: page || 1
     }
     last_fm_api(params)
   end
 
-  def top_tracks(mbid, page = 1)
+  def top_tracks(artist, page)
     params = {
       method: 'artist.gettoptracks',
-      mbid: mbid,
-      page: page
+      artist: artist,
+      page: page || 1
     }
     last_fm_api(params)
   end
