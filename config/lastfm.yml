@@ -1,0 +1,13 @@
+default: &default
+  api_key: '43796c0400cc940e0fc7aac25c9eec2e'
+  api_url: 'http://ws.audioscrobbler.com/2.0/?format=json'
+  limit: 5
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

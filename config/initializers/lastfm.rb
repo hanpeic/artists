@@ -1,0 +1,1 @@
+LASTFM = YAML.load_file("#{Rails.root}/config/lastfm.yml")[Rails.env]
