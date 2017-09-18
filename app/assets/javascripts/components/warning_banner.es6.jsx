@@ -4,7 +4,7 @@ class WarningBanner extends React.Component {
       return null;
     }
     return (
-      <div className="alert alert-danger" style={{textAlign: 'center'}}>
+      <div className="alert alert-danger" style={{textAlign: 'center', marginRight: '30%', marginLeft: '30%'}}>
         Warning!  {this.props.message}
       </div>
     );
