@@ -21,30 +21,13 @@ class Artists extends React.Component {
     this.setState({
       country: country
     })
+    sendRequest(url, this.updateArtists);
     that = this;
-    $.ajax({
-      url: url,
-      type: "GET",
-      cache: false,
-      dataType: "json",
-      success: function(data) {
-        that.updateArtists(data);
-      }
-    });
   }
 
   handlePageClick(page) {
     var url = '/artists/index.json?country=' + this.state.country + '&page=' + page;
-    that = this;
-    $.ajax({
-      url: url,
-      type: "GET",
-      cache: false,
-      dataType: "json",
-      success: function(data) {
-        that.updateArtists(data);
-      }
-    });
+    sendRequest(url, this.updateArtists);
   }
 
   updateArtists(data) {

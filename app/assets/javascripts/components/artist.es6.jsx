@@ -13,30 +13,12 @@ class Artist extends React.Component {
 
   componentDidMount() {
     var url = '/artists/' + this.props.name + '.json';
-    that = this;
-    $.ajax({
-      url: url,
-      type: "GET",
-      cache: false,
-      dataType: "json",
-      success: function(data) {
-        that.updateTracks(data);
-      }
-    });
+    sendRequest(url, this.updateTracks);
   }
 
   handlePageClick(page) {
     var url = '/artists/' + this.props.name + '.json?&page=' + page;
-    that = this;
-    $.ajax({
-      url: url,
-      type: "GET",
-      cache: false,
-      dataType: "json",
-      success: function(data) {
-        that.updateTracks(data);
-      }
-    });
+    sendRequest(url, this.updateTracks);
   }
 
   updateTracks(data) {

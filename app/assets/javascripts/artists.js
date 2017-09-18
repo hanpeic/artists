@@ -1,2 +1,11 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+function sendRequest(url, success) {
+  $.ajax({
+    url: url,
+    type: "GET",
+    cache: false,
+    dataType: "json",
+    success: function(data) {
+      success(data);
+    }
+  });
+}
