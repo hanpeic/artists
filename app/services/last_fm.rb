@@ -1,3 +1,5 @@
+require 'net/http'
+
 class LastFm
   LASTFM_API = "#{ LASTFM['api_url'] }&api_key=#{ LASTFM['api_key'] }&limit=#{ LASTFM['limit'] }&"
 
