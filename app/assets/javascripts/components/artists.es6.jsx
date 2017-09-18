@@ -15,6 +15,11 @@ class Artists extends React.Component {
 
   handleSubmit(country) {
     if(country === '') {
+      this.setState({
+        artists: [],
+        errorMessage: 'Please input a valid country name',
+        totalPages: 1
+      })
       return;
     }
     var url = '/artists/index.json?country=' + country;
