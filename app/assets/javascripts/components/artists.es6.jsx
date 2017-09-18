@@ -22,7 +22,6 @@ class Artists extends React.Component {
       country: country
     })
     sendRequest(url, this.updateArtists);
-    that = this;
   }
 
   handlePageClick(page) {

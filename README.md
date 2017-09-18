@@ -1,24 +1,35 @@
-# README
+## Artists
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A demo page to search artists by country.
 
-Things you may want to cover:
+You can visit on:
 
-* Ruby version
+http://artist-dev.us-west-2.elasticbeanstalk.com/
 
-* System dependencies
+## Features
 
-* Configuration
+Rails 5 in the backend, cache recently search results to avoid call last.fm API frequently.
 
-* Database creation
+React in the frontend.
 
-* Database initialization
+The results are paginated and display 5 results per page.
 
-* How to run the test suite
+## Installation
 
-* Services (job queues, cache servers, search engines, etc.)
+1 Install ruby 2.3
 
-* Deployment instructions
+2 Download code
 
-* ...
+3 Run: bundle install
+
+4 Start the server: rails s
+
+5 Open http://localhost:3000
+
+## Test
+
+Run: rspec
+
+## Problem
+
+Last.fm API's pagination info is not accurate, sometimes when you click last pages you will see an empty list.
